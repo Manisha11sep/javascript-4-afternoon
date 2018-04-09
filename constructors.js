@@ -14,6 +14,12 @@
 */
 
 // Code here
+function CarFactory(make, model){
+  this.make = make;
+  this.model = model;
+
+}
+
 
 
 
@@ -35,6 +41,7 @@ function Employee(name, email, hireDate) {
 // Code here
 
 
+const bob = new Employee('Bob', 'bob@gmail.com', '01-02-98');
 
 ////////// PROBLEM 4 //////////
 
@@ -48,11 +55,31 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
 /*
   Write a constructor function, including method definitions, which will make the above function invocations function properly.
 
-  Hint: you'll need to add a move property, with a starting value of zero, and write a moveCar function which will increment the move property by 10.
+  Hint: you'll need to add a move property, with a starting value of zero, and write a moveCar function which will increment the 
+  move property by 10.
   The move property will be added to every object that is being returned from the Car function.
-  You'll also need to use the 'this' keyword properly in order to make sure you're invoking moveCar on the right object (prius vs mustang).
+  You'll also need to use the 'this' keyword properly in order to make sure you're invoking moveCar on the right object 
+  (prius vs mustang).
 */
 
 // Code here
+function Car(name, model, year)
+{
+  this.name = name;
+  this.model = model;
+  this.year = year;
+  this.move=0;
+
+
+  this.moveCar = function(){
+    return this.move+10
+}
+
+}
+  
+  
+
+
+
 
 
